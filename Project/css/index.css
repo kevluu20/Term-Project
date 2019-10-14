@@ -1,0 +1,47 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #119DA4;
+    /* position: fixed;
+    top: 0;
+    width: 100%; */
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: georgia;
+}
+
+h1,
+#homeimage {
+    text-align: center;
+}
+
+.go {
+    float: right;
+    margin: 12px 20px 0px 0px
+}
+
+aside {
+    flex: 1;
+    margin-left: 10px;
+    float: left;
+    overflow: auto;
+}
+
+aside li {
+    padding-bottom: 10px;
+}
+
+
+/* hover button/ center footer/fix side bar */
