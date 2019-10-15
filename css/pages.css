@@ -37,3 +37,16 @@ h1,
 h2 {
     text-align: center;
 }
+
+ul.excluded * {
+    background-color: white;
+}
+
+ul.excluded li {
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: georgia;
+    background-color: white;
+}
