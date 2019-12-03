@@ -7,40 +7,103 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Testing - FirstGenAid</title>
     <link rel="stylesheet" href="./css/pages.css">
+    <style>
+        .list-title {
+            font-weight: bolder;
+        }
+        
+        table {
+            border: 1px solid black;
+            border-spacing: 0;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 700px;
+        }
+        
+        th,
+        td {
+            border: 0.5px solid black;
+        }
+        
+        th {
+            background-color: #119DA4;
+            color: white;
+        }
+        
+        td {
+            background-color: ghostwhite;
+        }
+        
+        #motion {
+            background-color: yellow;
+            margin-left: 300px;
+            margin-right: 300px;
+            margin-top: 50px;
+            height: 100px;
+            text-align: center;
+            border-radius: 50%;
+        }
+    </style>
+
+    <script>
+        let p = 100;
+        let i = 0;
+        const motivateList = ["You can do it!", "Get enough sleep!", "Focus on what you studied!", "Be confident in yourself!", "Don't give up!"]
+
+        function ready() {
+            let x = document.getElementById("motivate");
+            x.innerHTML = motivateList[i];
+            x.style.top = p + "px";
+            if (p > 200) {
+                p = 100;
+                i++;
+                if (i == motivateList.length) {
+                    i = 0;
+                }
+            } else {
+                p = p + 1;
+            }
+            setTimeout("ready()", 10);
+
+        }
+
+        // words not moving down
+    </script>
+
 </head>
 
-<body>
+<body onload="ready()">
     <div>
-        <h1> <img src="images/firstgen icon.png" alt="icon" title="First-Generation" height="50px" width="50px">
-            <a id="name" href="index.htm">FirstGenAid</a></h1>
-        <ul class="nav">
+        <h1> <img src=" images/firstgen icon.png " alt="icon " title="First-Generation " height="50px " width="50px ">
+            <a id="name " href="index.htm ">FirstGenAid</a></h1>
+        <ul class="nav ">
 
-            <li class="bar"><a class="tab" href="finanicalaid.htm">Financial Aid</a></li>
-            <li class="bar"><a class="tab" href="scholarships.htm">Scholarships</a></li>
-            <li class="bar"><a class="tab" href="testing.htm">Testing</a></li>
-            <li class="bar"><a class="tab" href="commonapp.htm">Common App</a></li>
-            <li class="bar"><a class="tab" href="programs.htm">Programs</a></li>
-            <li class="bar"><a class="tab" href="applying.htm">Colleges</a></li>
-            <li class="bar"><a class="tab" href="aboutus.htm">About Us</a></li>
-            <li class="bar"><a class="tab" href="contactus.htm">Contact Us</a></li>
-            <li class="bar"><a class="tab" href="sitemap.htm">Site Map</a></li>
-            <li class="go" class="bar"><input type=" text " name="search " maxlength="100 " width="120 " />
-                <button id="ton" type="submit" name="submit" value="submit">GO</button></li>
+            <li class="bar "><a class="tab " href="finanicalaid.htm ">Financial Aid</a></li>
+            <li class="bar "><a class="tab " href="scholarships.htm ">Scholarships</a></li>
+            <li class="bar "><a class="tab " href="testing.htm ">Testing</a></li>
+            <li class="bar "><a class="tab " href="commonapp.htm ">Common App</a></li>
+            <li class="bar "><a class="tab " href="programs.htm ">Programs</a></li>
+            <li class="bar "><a class="tab " href="applying.htm ">Colleges</a></li>
+            <li class="bar "><a class="tab " href="aboutus.htm ">About Us</a></li>
+            <li class="bar "><a class="tab " href="contactus.htm ">Contact Us</a></li>
+            <li class="bar "><a class="tab " href="sitemap.htm ">Site Map</a></li>
+            <li class="go " class="bar "><input type=" text " name="search " maxlength="100 " width="120 " />
+                <button id="ton " type="submit " name="submit " value="submit ">GO</button></li>
 
         </ul>
     </div>
 
-    <h2>Testing</h2>
+    <h2 class="page ">Testing</h2>
 
-    <p><img src="./images/sat_act.png" alt="testing" title="testing"></p>
+    <p class="pageimg "><img src="./images/sat_act.png " alt="testing " title="testing "></p>
 
     <h3>SAT</h3>
 
     <table>
         <tr>
-            <td>Section</td>
-            <td>Minutes Given</td>
-            <td>Number of Questions</td>
+            <th>Section</th>
+            <th>Minutes Given</th>
+            <th>Number of Questions</th>
         </tr>
         <tr>
             <td>Reading</td>
@@ -83,9 +146,9 @@
 
     <table>
         <tr>
-            <td>Section</td>
-            <td>Minutes Given</td>
-            <td>Number of Questions</td>
+            <th>Section</th>
+            <th>Minutes Given</th>
+            <th>Number of Questions</th>
         </tr>
         <tr>
             <td>English</td>
@@ -125,28 +188,49 @@
 
     </p>
 
-    <h4>Should you take the SAT or the ACT?</h4>
+    <h3>Should you take the SAT or the ACT?</h3>
 
     <p>Both exams generally cover the same material and schools often don't have a preference when it comes to what exam to take. This ultimately comes down to what types of questions you prefer and and the format of the exam. Take the practice exams of
         both the SAT and ACT and recognize the differences. Both exams have a different pace, feel, and look so it is essential that you choose the exam that will maximize your performance and score.
     </p>
-    <h3>Testing Tips</h3>
+    <h3>Top 5 Testing Tips</h3>
+    <ol>
+        <li class="list-title ">Answer questions you know first</li>
+        <p></p>
+        <li class="list-title ">Eliminate the obvious incorrect answers</li>
+        <p></p>
+        <li class="list-title ">If you don't know, make an educated guess</li>
+        <p></p>
+        <li class="list-title ">Watch out for time</li>
+        <p></p>
+        <li class="list-title ">Practice, practice, and more practice</li>
+    </ol>
 
-    <h5>External Links</h5>
 
-    <a href="https://collegereadiness.collegeboard.org/sat">Official Website of the SAT</a> <br>
-    <a href="http://www.act.org/">Official Website of the ACT</a><br>
+    <div id="motion">
 
+        <h2 id="motivate">Moving Motivation</h2>
+
+    </div>
+
+
+
+    <div class="external ">
+        <h4>External Links</h4>
+
+        <a href="https://collegereadiness.collegeboard.org/sat ">Official Website of the SAT</a> <br>
+        <a href="http://www.act.org/ ">Official Website of the ACT</a><br>
+    </div>
     <hr>
 
     <footer>
         <div>
-            <ul class="nav">
-                <li class="bar"><a class="tab" href="index.htm">Homepage</a></li>
-                <li class="bar"><a class="tab" href="aboutus.htm">About Us</a></li>
-                <li class="bar"><a class="tab" href="contactus.htm">Contact Us</a></li>
-                <li class="bar"><a class="tab" href="sitemap.htm">Site Map</a></li>
-                <li class="bar"><a class="tab" href="credits.htm">Credits</a></li>
+            <ul class="nav ">
+                <li class="bar "><a class="tab " href="index.htm ">Homepage</a></li>
+                <li class="bar "><a class="tab " href="aboutus.htm ">About Us</a></li>
+                <li class="bar "><a class="tab " href="contactus.htm ">Contact Us</a></li>
+                <li class="bar "><a class="tab " href="sitemap.htm ">Site Map</a></li>
+                <li class="bar "><a class="tab " href="credits.htm ">Credits</a></li>
 
             </ul>
         </div>

@@ -7,6 +7,41 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Programs - FirstGenAid</title>
     <link rel="stylesheet" href="./css/pages.css">
+
+    <style>
+        h5 {
+            font-size: 15px;
+        }
+        
+        .list-title {
+            font-weight: bolder;
+        }
+        
+        #close {
+            text-align: center;
+            font-weight: bolder;
+            background-color: navajowhite;
+        }
+    </style>
+
+    <script>
+        function enlarge(x) {
+            console.log(x)
+            let i = document.getElementById(x);
+            let w = i.width;
+            w = w * 1.2;
+            i.style.width = w + "px";
+        }
+
+        function shrink(x) {
+            let i = document.getElementById(x);
+            let w = i.width;
+            w = w / 1.2;
+            i.style.width = w + "px";
+        }
+    </script>
+
+
 </head>
 
 <body>
@@ -31,20 +66,19 @@
     </div>
 
 
-    <h2>Programs</h2>
+    <h2 class="page">Programs</h2>
 
-    <p><img src="images/page 2 header.png" alt="header" title="header" width="600px" height="275"></p>
+    <p class="pageimg"><img src="images/page 2 header.png" alt="header" title="header" width="600px" height="275"></p>
 
 
-    <p>There are so many resources out there for students who are lost in the procss, need assistance, and want extra support.</p>
+    <h5> There are so many resources out there for students who are lost in the procss, need assistance, and want extra support.
+        <br><br> FirstGenAid has provided some programs that would help first-generation or low-income students throughout their academic career and beyond.</h5>
 
-    <p>FirstGenAid has provided some programs that would help first-generation or low-income students throughout their academic career and beyond. </p>
-
-    <h5>Posse Foundation</h5>
-    <p><img src="images/posse.jpg" alt="Posse" title="Posse" height="25%" width="25%"></p>
+    <h3>Posse Foundation</h3>
+    <p class="secimg"><img id="posse" onmouseover="enlarge(this.id)" onmouseout="shrink(this.id)" src="images/posse.jpg" alt="Posse" title="Posse" height="25%" width="25%"></p>
     <p>The Posse Foundation is designed to connect a diverse group of talented highschool students with colleges all around the United States. The purpose of Posse is to select unique and skilled individuals and prepare them to become leaders of the future
         in their communities and in society. These students will reflect the rich demographic mix of the 21st century.
-        <br><br> There are 3 goals that Posse hopes to accomplish:
+        <br><br> <span class="list-title">There are 3 goals that Posse hopes to accomplish:</span><br>
         <br> 1. To expand the pool from which top colleges and universities can recruit outstanding young leaders from diverse backgrounds.
         <br> 2. To help these institutions build more interactive campus environments so that they can be more welcoming for people from all backgrounds.
         <br> 3. To ensure that Posse Scholars persist in their academic studies and graduate so they can take on leadership positions in the workforce.
@@ -54,14 +88,14 @@
         graduate at a rate of 90%.
     </p>
 
-    <h5>QuestBridge</h5>
-    <p><img src="images/quest.jpg" alt="Questbridge" title="Questbridge"></p>
+    <h3>QuestBridge</h3>
+    <p class="secimg"><img id="quest" onmouseover="enlarge(this.id)" onmouseout="shrink(this.id)" src="images/quest.jpg" alt="Questbridge" title="Questbridge"></p>
 
     <p>QuestBridge is a beneficial platform that primarily assists bright and talented low-income students with getting into prestine institutions for higher education. The connection between top colleges and less fortunate students who have potential to
         do great things in the future is the main goal of Questbridge. Their vision for the future is to have thoughtful leaders from all walks of life. Questbridge hopes to find talented low-income students and give them opportunities to succeed academically
         and professionally.
 
-        <br><br> Proven Success
+        <br><br> <span class="list-title">Proven Success</span>
         <br><br> 1. Over 60,000 students served by our programs
         <br> 2. Over 22,000 National College Match Finalists that have been admitted to a college partner
         <br> 3. Over 13,500 students and parents have attended QuestBridge conferences to kick start their college admissions process
@@ -69,8 +103,8 @@
         <br> 5. Over 6,000 QuestBridge Scholars “matched” to a college partner with a full four-year scholarship
     </p>
 
-    <h5>Bottomline</h5>
-    <p><img src="images/bottomline.png" alt="Bottom Line" title="Bottom Line"></p>
+    <h3>Bottomline</h3>
+    <p class="secimg"><img id="bottom" onmouseover="enlarge(this.id)" onmouseout="shrink(this.id)" src="images/bottomline.png" alt="Bottom Line" title="Bottom Line"></p>
 
     <p>Bottom Line has helped thousands of low-income and first-generation students get to college, stay in college, and earn their degrees. Their services are avaibale in Boston, Worcester, Chicago, and New York City. It is a non-profit organization that
         serves over 7,000 students in its 2 primarly programs called College Access and College Success. Bottomline's purpose is to solve the problem of low graduation rates of low-income and first-generation students. Bottomline provides students with
@@ -78,19 +112,19 @@
         <br><br> Some perks include recieving specialized one-on-one guidance and mentoring. They support students through senior year of highschool and up to 6 years through college. Bottomline wants to see students succeed beyond college, ensuring that
         opportunities are not missed. By providing long-term and personalized support in college, our students are 43 percentage points more likely to earn a degree than their peers.
     </p>
-    <p> Bottom Line holds the following core values at the center of everything we do:
+    <p> <span class="list-title"> Bottom Line holds the following core values at the center of everything we do:</span>
         <br><br> 1. Relationships <br> 2. Persistence <br> 3. Results <br> 4. Efficiency <br> 5. Responsibilty <br> 6. Excellence
     </p>
 
-    <p>These are just a few programs that are available to high school students. Don't be afraid to ask your school about programs that they have or do more research online. There is no telling what amazing resources you will find.</p>
+    <p id="close">These are just a few programs that are available to high school students. Don't be afraid to ask your school about programs that they have or do more research online. There is no telling what amazing resources you will find.</p>
+    <div class="external">
+        <h4>External Links</h4>
 
-    <h5>External Links</h5>
-
-    <a href="https://www.possefoundation.org/">Posse Foundation</a> <br>
-    <a href="https://www.questbridge.org/">QuestBridge</a><br>
-    <a href="https://www.bottomline.org/">Bottom Line</a> <br>
-    <a href="http://firstgenfellows.org/first-generation-college-student-links/">First Gen Nonprofits</a>
-
+        <a href="https://www.possefoundation.org/">Posse Foundation</a> <br>
+        <a href="https://www.questbridge.org/">QuestBridge</a><br>
+        <a href="https://www.bottomline.org/">Bottom Line</a> <br>
+        <a href="http://firstgenfellows.org/first-generation-college-student-links/">First Gen Nonprofits</a>
+    </div>
 
     <hr>
 

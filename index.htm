@@ -8,32 +8,138 @@
     <title>FirstGenAid Homepage</title>
     <link rel="stylesheet" href="css/index.css">
     <style>
-        #welcome {
+        * {
+            box-sizing: border-box
+        }
+        
+        .mySlides {
+            display: none
+        }
+        
+        img {
+            vertical-align: middle;
+        }
+        
+        .slideshow {
+            max-width: 1000px;
             position: relative;
-            top: -130px;
-            z-index: 100;
-            text-align: center;
-            /* color: #FFE7CF; */
+            margin-top: 50px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #b7dee8;
+        }
+        
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
             color: white;
-            font-size: 50px;
-            margin: 0;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
         }
         
-        aside {
-            width: 250px;
-            margin-left: 25px;
-            background-color: #B1E8DE;
-            padding-left: 20px;
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        /* On hover, add a grey background color */
+        
+        .prev:hover,
+        .next:hover {
+            background-color: #f1f1f1;
+            color: black;
         }
         
-        h2,
-        table,
-        h4,
-        h3,
-        #media {
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+        
+        .active,
+        .dot:hover {
+            background-color: #717171;
+        }
+        /* Fading animation */
+        
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+        
+        @-webkit-keyframes fade {
+            from {
+                opacity: .4
+            }
+            to {
+                opacity: 1
+            }
+        }
+        
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+            to {
+                opacity: 1
+            }
+        }
+        
+        #assoc {
             text-align: center;
+            font-weight: bolder;
+            font-size: xx-large;
+            background-color: navajowhite;
         }
     </style>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+
 </head>
 
 <body>
@@ -63,53 +169,90 @@
         <h3 id="welcome">Welcome to FirstGenAid!</h3>
     </p>
 
-    <main>
-        <aside>
-            <h4>Articles for First-Gen Students</h4>
+    <aside>
+        <h4>Articles for First-Gen Students</h4>
 
-            <p><a href="https://www.usnews.com/education/best-colleges/articles/2019-05-14/what-you-should-know-as-a-first-generation-college-student">What to Know as a First-Generation College Student</a></p>
-            <p><a href="https://www.collegeraptor.com/getting-in/articles/questions-answers/what-is-a-first-generation-college-student/">What is a First-Generation College Student?</a></p>
-            <p><a href="https://www.greatschools.org/gk/articles/struggles-first-generation-college-students-face/">Stuggles Many First-Generation College Students Face</a></p>
-            <p><a href="https://www.league.org/innovation-showcase/breaking-down-barriers-first-generation-college-students-and-college-success">Breaking Down Barriers: First-Generation College Students and College Success</a></p>
-            <p><a href="https://all4ed.org/the-challenges-and-privileges-of-being-a-first-generation-college-student/">The Challenges and Privileges of Being a First-Generation College Student</a></p>
+        <p><a href="https://www.usnews.com/education/best-colleges/articles/2019-05-14/what-you-should-know-as-a-first-generation-college-student">What to Know as a First-Generation College Student</a></p>
+        <p><a href="https://www.collegeraptor.com/getting-in/articles/questions-answers/what-is-a-first-generation-college-student/">What is a First-Generation College Student?</a></p>
+        <p><a href="https://www.greatschools.org/gk/articles/struggles-first-generation-college-students-face/">Stuggles Many First-Generation College Students Face</a></p>
+        <p><a href="https://www.league.org/innovation-showcase/breaking-down-barriers-first-generation-college-students-and-college-success">Breaking Down Barriers: First-Generation College Students and College Success</a></p>
+        <p><a href="https://all4ed.org/the-challenges-and-privileges-of-being-a-first-generation-college-student/">The Challenges and Privileges of Being a First-Generation College Student</a></p>
+        <p><a href="https://www.affordablecollegesonline.org/college-resource-center/first-generation-college-students/">First-Generation College Student Guide</a></p>
 
-            <!-- extend side bar -->
 
-        </aside>
+    </aside>
 
-        <article>
-            <h2>Values of FirstGenAid</h2>
+    <div id="main">
+        <h2 id="values">Values of FirstGenAid</h2>
 
-            <table>
-                <tr>
-                    <td>Tips</td>
-                    <td>Information</td>
-                    <td>Support</td>
-                </tr>
-                <tr>
-                    <td><img src="images/tips.png" alt="tips" title="tips" height="200px" width="200px"></td>
-                    <td><img src="images/info.png" alt="info" title="info" height="200px" width="200px"></td>
-                    <td><img src="images/support.png" alt="support" title="support" height="200px" width="200px"></td>
-                </tr>
-                <tr>
-                    <td>We provide first-generation students with tips on navigating the college application process.</td>
-                    <td>We provide first-generation students with information and resources that will provide them with more clarity.</td>
-                    <td>We provide first-generation students with support from scholarships to assistance programs that could make the college process less stressful. </td>
-                </tr>
-            </table>
-        </article>
-    </main>
-    <hr>
+        <table>
+            <tr>
+                <th>Tips</th>
+                <th>Information</th>
+                <th>Support</th>
+            </tr>
+            <tr>
+                <td class="pic"><img src="images/tips.png" alt="tips" title="tips" height="150px" width="150px"></td>
+                <td class="pic"><img src="images/info.png" alt="info" title="info" height="150px" width="150px"></td>
+                <td class="pic"><img src="images/support.png" alt="support" title="support" height="150px" width="150px"></td>
+            </tr>
+            <tr>
+                <td class="cap">We provide first-generation students with tips on navigating the college application process.</td>
+                <td class="cap">We provide first-generation students with information and resources that will provide them with more clarity.</td>
+                <td class="cap">We provide first-generation students with support from scholarships to assistance programs that could make the college process less stressful. </td>
+            </tr>
+        </table>
+    </div>
+
+
+    <h2 id="assoc">We are associated with</h2>
+
+    <div class="slideshow">
+
+        <div class="mySlides fade">
+            <img src="../Term-Project/images/webtech.jpg" style="width: 100%">
+
+        </div>
+
+        <div class="mySlides fade">
+            <img src="../Term-Project/images/babson.jpg" style="width:100%">
+
+        </div>
+
+        <div class="mySlides fade">
+            <img src="../Term-Project/images/malden.jpg" style="width:100%">
+
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <!-- create slideshow with javascript -->
+    <!--can use simpler slideshow (see class17-1)  -->
+    <!-- can't get initial image to show/ have all images same size -->
+
+
     <div id="media">
-        <h3>Multimedia Library</h3>
+        <h2 id="library">Multimedia Library</h2>
+        <h4>What I have learned as a first-generation college student | Lyric Swinton | TEDxUofSC</h4>
         <p> <iframe width="560" height="315" src="https://www.youtube.com/embed/VRVG7kjvw7g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
         <p>
+            <h4>First-Generation Americans Talk About The American Dream</h4>
             <audio controls>
         <source src="images/First-Generation Americans Talk About The American Dream (1).mp3">
         </audio>
         </p>
     </div>
-    <hr>
+
 
     <footer>
         <div>

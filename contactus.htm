@@ -17,7 +17,62 @@
             margin: 0;
             text-align: center;
         }
+        
+        h3,
+        #email {
+            text-align: center;
+        }
+        
+        form {
+            background-color: #f2f4ff;
+            border: 1px solid black;
+            margin: 10px;
+            padding: 5px;
+        }
+        
+        #email {
+            font-weight: bolder;
+        }
     </style>
+
+    <script>
+        function submitForm() {
+
+            let x = document.getElementById("ty")
+            let exceptional = document.getElementById("exceptional")
+            let great = document.getElementById("great")
+            let average = document.getElementById("average")
+            let bad = document.getElementById("bad")
+            let financialAid = document.getElementById("aid")
+            let scholarships = document.getElementById("scho")
+            let testing = document.getElementById("test")
+            let commonapp = document.getElementById("app")
+            let programs = document.getElementById("prog")
+            let colleges = document.getElementById("coll")
+
+
+            event.preventDefault();
+
+            if (exceptional.checked == true || great.checked == true || average.checked == true || bad.checked == true) {
+                x.innerHTML = "Thank you for filling out the form!";
+                x.style.fontWeight = "bolder";
+                x.style.fontSize = "25px";
+                x.style.textAlign = "center";
+                x.style.backgroundColor = "yellow";
+            } else {
+                alert("Please complete the form!")
+                x.style.display = "none"
+            }
+
+            if (financialAid.checked == false && scholarships.checked == false && testing.checked == false && commonapp.checked == false && programs.checked == false && colleges.checked == false) {
+                alert("Please complete the form!")
+                x.style.display = "none"
+            }
+
+        }
+
+        // Allows for only one submission per person
+    </script>
 </head>
 
 <body>
@@ -49,30 +104,33 @@
 
 
     <h3>If you have any further quesitons, please email us and we will get back to you as soon as possible.</h3>
-    <p>Email:<a href="mailto: kluu1@babson.edu"> kluu1@babson.edu</a></p>
+    <p id="email">Email:<a href="mailto: kluu1@babson.edu"> kluu1@babson.edu</a></p>
 
-    <form method="POST" action="mailto:kluu1@babson.edu">
+    <form id="contact" method="POST" action="">
+        <h3>Please Fill Out Form</h3>
         <p>How was your experience on the site?</p>
-        <input type="radio" name="exceptional" value="exceptional" />Exceptional<br />
-        <input type="radio" name="great" value="great" />Great<br />
-        <input type="radio" name="avergae" value="average" />Average<br />
-        <input type="radio" name="bad" value="bad" />Bad
+        <input type="radio" name="experience" value="exceptional" id="exceptional" />Exceptional<br />
+        <input type="radio" name="experience" value="great" id="great" />Great<br />
+        <input type="radio" name="experience" value="average" id="average" />Average<br />
+        <input type="radio" name="experience" value="bad" id="bad" />Bad
 
         <p>What did you find most valuable from the site?</p>
-        <input type="checkbox" name="valuable" value="Financial Aid" />Financial Aid<br />
-        <input type="checkbox" name="valuable" value="Scholarships" />Scholarships<br />
-        <input type="checkbox" name="valuable" value="Testing" />Testing<br />
-        <input type="checkbox" name="valuable" value="Common App" />Common App<br />
-        <input type="checkbox" name="valuable" value="Programs" />Programs<br />
-        <input type="checkbox" name="valuable" value="Colleges" />Colleges<br />
+        <input type="checkbox" name="check" value="financialAid" id="aid" />Financial Aid<br />
+        <input type="checkbox" name="check" value="scholarships" id="scho" />Scholarships<br />
+        <input type="checkbox" name="check" value="testing" id="test" />Testing<br />
+        <input type="checkbox" name="check" value="commonApp" id="app" />Common App<br />
+        <input type="checkbox" name="check" value="programs" id="prog" />Programs<br />
+        <input type="checkbox" name="check" value="colleges" id="coll" />Colleges<br />
         <p>Comment any suggestions you have to improve the site and the experience for the audience.</p>
 
         <textarea name="comments" rows="5" cols="29" placeholder="Any comments here."></textarea>
 
         <p>
-            <button type="submit" name="submit" value="submit">Submit </button>
-            <button type="reset" name="reset" value="reset">Reset</button>
+            <button onclick="submitForm()" type="submit" name="submit" value="submit">Submit </button>
+
         </p>
+
+        <p id="ty"></p>
     </form>
 
     <hr>

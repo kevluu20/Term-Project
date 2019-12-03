@@ -17,7 +17,41 @@
             margin: 0;
             text-align: center;
         }
+        
+        #code {
+            background-color: navajowhite;
+            font-weight: bolder;
+            text-align: center;
+        }
+        
+        #home {
+            font-weight: bolder;
+            font-size: 25px;
+        }
+        
+        .link2page {
+            font-weight: bolder;
+        }
+        
+        #table {
+            background-color: #f2f4ff;
+        }
     </style>
+
+    <script crossorigin="anonymous" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <style type="text/css">
+
+    </style>
+    <script type="text/javascript">
+        $(function() {
+            $(".empha").hover(function() {
+                    $('.empha').css("font-size", "30px");
+                }),
+                function() {
+                    $('.empha').css("font-size", "10px");
+                }
+        })
+    </script>
 </head>
 
 <body>
@@ -48,26 +82,27 @@
 
     <hr>
 
-    <ul>
+    <ul id="table">
         <!--class="excluded"  -->
-        <li><a href="index.htm">Home</a>
+        <li><a id="home" class="empha" href="index.htm">Home</a>
             <ul>
-                <li><a href="aboutus.htm">About Us</a></li>
-                <li><a href="contactus.htm">Contact Us</a></li>
-                <li><a href="finanicalaid.htm">Financial Aid</a>
+                <li class="link2page empha"><a href="aboutus.htm">About Us</a></li>
+                <li class="link2page empha"><a href="contactus.htm">Contact Us</a></li>
+                <li class="link2page empha"><a href="credits.htm">Credits</a></li>
+                <li class="link2page empha"><a href="finanicalaid.htm">Financial Aid</a>
                     <ul>
                         <li>FAFSA</li>
                         <li>CSS</li>
                         <li>IDOC</li>
                     </ul>
                 </li>
-                <li><a href="scholarships.htm">Scholarships</a>
+                <li class="link2page empha"><a href="scholarships.htm">Scholarships</a>
                     <ul>
                         <li>Outside Sources</li>
                         <li>Through Your School</li>
                     </ul>
                 </li>
-                <li>
+                <li class="link2page empha">
                     <a href="applying.htm">Colleges</a>
                     <ul>
                         <li>Research</li>
@@ -75,7 +110,7 @@
                     </ul>
                 </li>
 
-                <li>
+                <li class="link2page empha">
                     <a href="commonapp.htm">Common App</a>
                     <ul>
                         <li>Essays</li>
@@ -84,13 +119,13 @@
                     </ul>
 
                 </li>
-                <li><a href="testing.htm">Testing</a>
+                <li class="link2page empha"><a href="testing.htm">Testing</a>
                     <ul>
                         <li>SAT Tips</li>
                         <li>ACT Tips</li>
                     </ul>
                 </li>
-                <li><a href="programs.htm">Programs</a>
+                <li class="link2page empha"><a href="programs.htm">Programs</a>
                     <ul>
                         <li>Questbright</li>
                         <li>Posse</li>
@@ -112,7 +147,7 @@
 
     </ul>
 
-    <p>“I, Kevin Luu, pledge my honor that I have neither received nor provided unauthorized assistance during the completion of this work. I have read the term project instructions and observed all the restrictions and limitations specified therein.” </p>
+    <p id="code">“I, Kevin Luu, pledge my honor that I have neither received nor provided unauthorized assistance during the completion of this work. I have read the term project instructions and observed all the restrictions and limitations specified therein.” </p>
 
     <hr>
 

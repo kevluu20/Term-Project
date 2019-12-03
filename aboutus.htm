@@ -18,7 +18,63 @@
             margin: 0;
             text-align: center;
         }
+        
+        h3 {
+            text-align: center;
+        }
+        
+        #sitemap {
+            text-align: center;
+            background-color: #b7dee8;
+        }
+        
+        form {
+            background-color: #f2f4ff;
+            font-weight: bolder;
+        }
     </style>
+
+    <script>
+        function where() {
+            let myForm = document.getElementById("form1")
+            let source = myForm.source.value
+            let x = document.getElementById("ty")
+
+            event.preventDefault();
+
+            if (source == "None") {
+                alert("Please select an option!")
+            } else {
+                x.innerHTML = "Thank you for filling out the form!";
+                x.style.fontWeight = "bolder";
+                x.style.fontSize = "25px";
+                x.style.textAlign = "center";
+                x.style.backgroundColor = "yellow";
+                myForm.style.backgroundColor = "greenyellow"
+            }
+        }
+    </script>
+
+    <script crossorigin="anonymous" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <style type="text/css">
+        .para {
+            font-style: oblique;
+            font-weight: bold;
+            background-color: navajowhite;
+            border: 1px solid black;
+            margin: 10px;
+            padding: 10px;
+        }
+    </style>
+    <script type="text/javascript">
+        $(function() {
+            $("#aboutUS").mouseover(function() {
+                $("#aboutUS").addClass("para")
+
+            })
+        });
+    </script>
+
 </head>
 
 <body>
@@ -46,21 +102,20 @@
 
 
     <p id="image"> <img src="images/grass.jpg" alt="First-Generation" title="First-Generation" width="90%" height="200px"></p>
-    <h2>Location</h2>
-    <p>
+    <h3>Location</h3>
+
+    <p id="sitemap">
         <map name="Middlesex" />
 
         <area shape="rect" coords="350, 205, 373, 212" href="https://www.cityofmalden.org/" alt="the City of Malden" title="City of Wellesley" target="_blank" />
         <area shape="rect" coords="280, 250, 313, 278" href="http://www.newtonma.gov/" alt="the City of Newton" title="City of Newton" target="_blank" />
         <img src="images/site map.png" usemap="#Middlesex" alt="Map of Middlesex" title="Clickable Map" />
     </p>
-    <!-- site map not clicking -->
-
 
     <h3>We empower students who are the first in their family to attend college to achieve their dreams.</h3>
 
 
-    <p>
+    <p id="aboutUS">
         The idea of this site drew inspiration from the diverse city of Malden, MA, located within the Middlesex County. In Malden, there are a lot of first-generation students that are not sure what to do after high school. Some students have no idea what applying
         for college is like and how to submit all the necessary forms to be considered when applying. The college application process is one that is confusing, stressful, and time consuming. There are millions of first generation students in the United
         States who need assistance. Too many high school students are not living up to their full potential because they are not educated about college.
@@ -69,17 +124,19 @@
 
     </p>
 
-    <form method="POST" action="mailto:kluu1@babson.edu">
+    <form id="form1" method="POST" action="">
         <p>How did you hear about FirstGenAid?
-            <select name="Source">
-<option value="Friend">Friend</option>
-<option value="Search">Search Engine</option>
-<option value="School">School</option>
-<option value="Other">Other</option>
+            <select name="source">
+                <option value="None"> No Selection</option>
+                <option value="Friend">Friend</option>
+                <option value="Search">Search Engine</option>
+                <option value="School">School</option>
+                <option value="Other">Other</option>
             </select> </p>
-        <p><button type="submit" name="submit" value="submit">
-                    SUBMIT 
+        <p><button type="submit" name="submit" value="submit" onclick="where()">
+                    Submit 
                 </button></p>
+        <p id="ty"></p>
     </form>
 
     <hr>

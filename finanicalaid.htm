@@ -7,6 +7,28 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Financial Aid - FirstGenAid</title>
     <link rel="stylesheet" href="./css/pages.css">
+    <style>
+        h5 {
+            font-size: 15px;
+        }
+    </style>
+
+    <script>
+        function enlarge(x) {
+            console.log(x)
+            let i = document.getElementById(x);
+            let w = i.width;
+            w = w * 1.2;
+            i.style.width = w + "px";
+        }
+
+        function shrink(x) {
+            let i = document.getElementById(x);
+            let w = i.width;
+            w = w / 1.2;
+            i.style.width = w + "px";
+        }
+    </script>
 </head>
 
 <body>
@@ -30,16 +52,16 @@
         </ul>
     </div>
 
-    <h2>Financial Aid</h2>
+    <h2 class="page">Financial Aid</h2>
 
-    <p><img src="./images/aid.jpg" alt="aid" title="aid" height="400" width="600"></p>
+    <p class="pageimg"><img src="./images/aid.jpg" alt="aid" title="aid" height="400" width="600"></p>
 
-    <p>College tuitions have been increasing throughout the years making it very expensive to attend. For students who come from low-class to middle-class families, financial aid is essential. Based on your family's income and financials, students receive
+    <h5>College tuitions have been increasing throughout the years making it very expensive to attend. For students who come from low-class to middle-class families, financial aid is essential. Based on your family's income and financials, students receive
         money based on need. Filling out the FAFSA, CSS Profile, and IDOC are required to be considered for this need-based aid.
-    </p>
+    </h5>
 
     <h3>FAFSA</h3>
-    <p><img src="./images/fafsa.JPG" alt="fafsa" title="fafsa" height="25%" width="25%"></p>
+    <p class="secimg"><img id="fafsa" onmouseover="enlarge(this.id)" onmouseout="shrink(this.id)" src="./images/fafsa.JPG" alt="fafsa" title="fafsa" height="25%" width="25%"></p>
 
     <p>To apply for federal student aid, such as federal grants, work-study, and loans, you need to complete the Free Application for Federal Student Aid (FAFSA). Completing and submitting the FAFSA is free and easier than ever, and it gives you access to
         the largest source of financial aid to pay for college or career school. In addition, many states and colleges use your FAFSA information to determine your eligibility for state and school aid, and some private financial aid providers may use
@@ -47,24 +69,26 @@
         able to estimate how much aid you could receive thorugh the website's financial aid calculator. </p>
     <h3>CSS Profile</h3>
 
-    <p><img src="./images/css profile.png" alt="css" title="css" height="25%" width="25%"></p>
+    <p class="secimg"><img id="css" onmouseover="enlarge(this.id)" onmouseout="shrink(this.id)" src="./images/css profile.png" alt="css" title="css" height="25%" width="25%"></p>
     <p>The CSS is an online application to determine eligibility for non-federal financial aid, which is administered by the College Board. Not every college requires it, but nearly 400 colleges do, so be sure to first check the list of schools to determine
         whether you needs to complete the application. Unlike the FAFSA, there is a fee to apply. The first application is $25 and reports to additional schools are $16 each. Fee waivers are granted to high-need students, generally for household incomes
         of $40,000 or less per year. Both the CSS application and the FAFSA can be filed as early as October 1 and should be completed as soon as possible to take advantage of aid that is distributed on a first-come, first-served basis. The CSS does not
         replace the FAFSA, but compliments it. CSS takes a closer look at finances to determine if you are eligible for non-federal aid. </p>
     <h3>IDOC</h3>
-    <p><img src="./images/collegeboard.JPG" alt="idoc" title="idoc" height="25%" width="25%"></p>
+    <p class="secimg"><img id="cb" onmouseover="enlarge(this.id)" onmouseout="shrink(this.id)" src="./images/collegeboard.JPG" alt="idoc" title="idoc" height="25%" width="25%"></p>
 
     <p>IDOC is an Institutional Documentation Service. This always you to upload all you financial aid materials, such as tax returns and W-2 forms onto the website so that it can be shared with your IDOC school automatically. It is not required to complete
         the IDOC unless you are notified by email about signing in and sumbitting documents. Make sure that all the family information is correct and that the deadlines are met.
     </p>
-    <h5>External Links</h5>
 
-    <a href="https://studentaid.ed.gov/sa/fafsa">FAFSA</a> <br>
-    <a href="https://cssprofile.collegeboard.org/">CSS Profile</a><br>
-    <a href="https://pages.collegeboard.org/idoc">IDOC</a> <br>
+    <div class="external">
+        <h4>External Links</h4>
 
+        <a href="https://studentaid.ed.gov/sa/fafsa">FAFSA</a> <br>
+        <a href="https://cssprofile.collegeboard.org/">CSS Profile</a><br>
+        <a href="https://pages.collegeboard.org/idoc">IDOC</a> <br>
 
+    </div>
     <hr>
 
     <footer>
