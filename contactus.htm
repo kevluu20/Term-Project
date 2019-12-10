@@ -52,7 +52,7 @@
 
 
             event.preventDefault();
-
+            // 1.Change the text on a page in response to the user’s action. 
             if (exceptional.checked == true || great.checked == true || average.checked == true || bad.checked == true) {
                 x.innerHTML = "Thank you for filling out the form!";
                 x.style.fontWeight = "bolder";
@@ -63,7 +63,7 @@
                 alert("Please complete the form!")
                 x.style.display = "none"
             }
-
+            // 3.Validate a form. 
             if (financialAid.checked == false && scholarships.checked == false && testing.checked == false && commonapp.checked == false && programs.checked == false && colleges.checked == false) {
                 alert("Please complete the form!")
                 x.style.display = "none"
