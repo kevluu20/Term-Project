@@ -111,38 +111,6 @@
         }
     </style>
 
-    <script>
-        let slideIndex = 1;
-        showSlides(slideIndex);
-
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
-
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
-
-        function showSlides(n) {
-            let i;
-            let slides = document.getElementsByClassName("mySlides");
-            let dots = document.getElementsByClassName("dot");
-            if (n > slides.length) {
-                slideIndex = 1
-            }
-            if (n < 1) {
-                slideIndex = slides.length
-            }
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " active";
-        }
-    </script>
 
 </head>
 
@@ -176,12 +144,18 @@
     <aside>
         <h4>Articles for First-Gen Students</h4>
 
-        <p><a href="https://www.usnews.com/education/best-colleges/articles/2019-05-14/what-you-should-know-as-a-first-generation-college-student">What to Know as a First-Generation College Student</a></p>
-        <p><a href="https://www.collegeraptor.com/getting-in/articles/questions-answers/what-is-a-first-generation-college-student/">What is a First-Generation College Student?</a></p>
-        <p><a href="https://www.greatschools.org/gk/articles/struggles-first-generation-college-students-face/">Stuggles Many First-Generation College Students Face</a></p>
-        <p><a href="https://www.league.org/innovation-showcase/breaking-down-barriers-first-generation-college-students-and-college-success">Breaking Down Barriers: First-Generation College Students and College Success</a></p>
-        <p><a href="https://all4ed.org/the-challenges-and-privileges-of-being-a-first-generation-college-student/">The Challenges and Privileges of Being a First-Generation College Student</a></p>
-        <p><a href="https://www.affordablecollegesonline.org/college-resource-center/first-generation-college-students/">First-Generation College Student Guide</a></p>
+        <p><a href="https://www.usnews.com/education/best-colleges/articles/2019-05-14/what-you-should-know-as-a-first-generation-college-student">What
+                to Know as a First-Generation College Student</a></p>
+        <p><a href="https://www.collegeraptor.com/getting-in/articles/questions-answers/what-is-a-first-generation-college-student/">What
+                is a First-Generation College Student?</a></p>
+        <p><a href="https://www.greatschools.org/gk/articles/struggles-first-generation-college-students-face/">Stuggles
+                Many First-Generation College Students Face</a></p>
+        <p><a href="https://www.league.org/innovation-showcase/breaking-down-barriers-first-generation-college-students-and-college-success">Breaking
+                Down Barriers: First-Generation College Students and College Success</a></p>
+        <p><a href="https://all4ed.org/the-challenges-and-privileges-of-being-a-first-generation-college-student/">The
+                Challenges and Privileges of Being a First-Generation College Student</a></p>
+        <p><a href="https://www.affordablecollegesonline.org/college-resource-center/first-generation-college-students/">First-Generation
+                College Student Guide</a></p>
 
 
     </aside>
@@ -201,7 +175,8 @@
                 <td class="pic"><img src="images/support.png" alt="support" title="support" height="150px" width="150px"></td>
             </tr>
             <tr>
-                <td class="cap">We provide first-generation students with tips on navigating the college application process.</td>
+                <td class="cap">We provide first-generation students with tips on navigating the college application process.
+                </td>
                 <td class="cap">We provide first-generation students with information and resources that will provide them with more clarity.</td>
                 <td class="cap">We provide first-generation students with support from scholarships to assistance programs that could make the college process less stressful. </td>
             </tr>
@@ -214,17 +189,17 @@
     <div class="slideshow">
 
         <div class="mySlides fade">
-            <img src="../Term-Project/images/webtech.jpg" style="width: 100%">
+            <img src="../Term-Project/images/webtech.jpg" style="width: 100%" height="450px">
 
         </div>
 
         <div class="mySlides fade">
-            <img src="../Term-Project/images/babson.jpg" style="width:100%">
+            <img src="../Term-Project/images/babson.jpg" style="width:100%" height="450px">
 
         </div>
 
         <div class="mySlides fade">
-            <img src="../Term-Project/images/malden.jpg" style="width:100%">
+            <img src="../Term-Project/images/malden.jpg" style="width:100%" height="450px">
 
         </div>
 
@@ -252,8 +227,8 @@
         <p>
             <h4>First-Generation Americans Talk About The American Dream</h4>
             <audio controls>
-        <source src="images/First-Generation Americans Talk About The American Dream (1).mp3">
-        </audio>
+                <source src="images/First-Generation Americans Talk About The American Dream (1).mp3">
+            </audio>
         </p>
     </div>
 
@@ -274,6 +249,39 @@
 
     </footer>
 
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
 
 
 </body>

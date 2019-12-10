@@ -1,110 +1,121 @@
-ul.nav {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #119DA4;
-}
-
-li.bar {
-    float: left;
-}
-
-li a.tab {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-family: georgia;
-}
-
-h1,
-#homeimage {
-    text-align: center;
-}
-
-.go {
-    float: right;
-    margin: 12px 20px 0px 0px
-}
-
-#welcome {
-    position: relative;
-    top: -130px;
-    z-index: 100;
-    text-align: center;
-    color: white;
-    font-size: 50px;
-    margin: 0;
-    padding: 0;
-}
-
-aside {
-    width: 250px;
-    margin-left: 10px;
-    background-color: #B1E8DE;
-    padding-left: 20px;
-    padding-bottom: 35px;
-    flex: auto;
-    display: table;
-    float: left;
-    overflow: auto;
-}
-
-h2,
-table,
-h4,
-h3,
-#media {
-    text-align: center;
-}
-
-#name {
-    text-decoration: none;
-    color: black;
-}
-
-a.tab:hover {
-    background-color: navajowhite;
-}
-
-#values {
-    margin-right: 130px;
-    font-size: xx-large;
-}
-
-#media {
-    margin-top: 50px;
-    background-color: #b7dee8;
-}
-
-th {
-    font-size: larger;
-    text-decoration: underline;
-    color: black;
-}
-
-.cap {
-    background-color: #FFE7CF;
-    font-size: medium;
-    padding: 10px;
-    border: 2px solid #119DA4;
-}
-
-.pic {
-    padding-top: 20px;
-    padding-bottom: 25px;
-}
-
-#library {
-    padding-top: 20px;
-}
-
-#main {
-    background-color: #b7dee8;
-    padding-top: 50px;
-}
-
-
-/* hover button/ center footer/fix side bar */
+            ul.nav {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: #119DA4;
+            }
+            
+            li.bar {
+                float: left;
+            }
+            
+            li a.tab {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-family: georgia;
+            }
+            
+            h1,
+            #homeimage {
+                text-align: center;
+            }
+            
+            .go {
+                float: right;
+                margin: 12px 20px 0px 0px
+            }
+            
+            #welcome {
+                position: relative;
+                top: -130px;
+                z-index: 100;
+                text-align: center;
+                color: white;
+                font-size: 50px;
+                margin: 0;
+                padding: 0;
+            }
+            
+            aside {
+                width: 250px;
+                margin-left: 10px;
+                background-color: #B1E8DE;
+                padding-left: 20px;
+                padding-bottom: 35px;
+                flex: auto;
+                display: table;
+                float: left;
+                overflow: auto;
+            }
+            
+            h2,
+            table,
+            h4,
+            h3,
+            #media {
+                text-align: center;
+            }
+            
+            #name {
+                text-decoration: none;
+                color: black;
+            }
+            
+            a.tab:hover {
+                background-color: navajowhite;
+            }
+            
+            #values {
+                margin-right: 130px;
+                font-size: xx-large;
+            }
+            
+            #media {
+                margin-top: 50px;
+                background-color: #b7dee8;
+            }
+            
+            th {
+                font-size: larger;
+                text-decoration: underline;
+                color: black;
+            }
+            
+            .cap {
+                background-color: #FFE7CF;
+                font-size: medium;
+                padding: 10px;
+                border: 2px solid #119DA4;
+            }
+            
+            .pic {
+                padding-top: 20px;
+                padding-bottom: 25px;
+            }
+            
+            #library {
+                padding-top: 20px;
+            }
+            
+            #main {
+                background-color: #b7dee8;
+                padding-top: 50px;
+            }
+            
+            @media (max-width: 700px) {
+                div {
+                    margin: 0 auto;
+                    width: auto;
+                }
+            }
+            
+            @media (max-width: 540px) {
+                div {
+                    margin: 0 auto;
+                    width: auto;
+                }
+            }

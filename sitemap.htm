@@ -36,6 +36,10 @@
         #table {
             background-color: #f2f4ff;
         }
+        
+        .empha {
+            font-size: large;
+        }
     </style>
 
     <script crossorigin="anonymous" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -45,11 +49,11 @@
     <script type="text/javascript">
         $(function() {
             $(".empha").hover(function() {
-                    $('.empha').css("font-size", "30px");
-                }),
+                    $(this).css("font-size", "30px");
+                },
                 function() {
-                    $('.empha').css("font-size", "10px");
-                }
+                    $(this).css("font-size", "large");
+                });
         })
     </script>
 </head>

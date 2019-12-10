@@ -43,6 +43,10 @@
             text-align: center;
             border-radius: 50%;
         }
+        
+        #motivate {
+            position: relative;
+        }
     </style>
 
     <script>
@@ -54,8 +58,8 @@
             let x = document.getElementById("motivate");
             x.innerHTML = motivateList[i];
             x.style.top = p + "px";
-            if (p > 200) {
-                p = 100;
+            if (p > 80) {
+                p = 0;
                 i++;
                 if (i == motivateList.length) {
                     i = 0;
@@ -75,7 +79,7 @@
 <body onload="ready()">
     <div>
         <h1> <img src=" images/firstgen icon.png " alt="icon " title="First-Generation " height="50px " width="50px ">
-            <a id="name " href="index.htm ">FirstGenAid</a></h1>
+            <a id="name" href="index.htm ">FirstGenAid</a></h1>
         <ul class="nav ">
 
             <li class="bar "><a class="tab " href="finanicalaid.htm ">Financial Aid</a></li>

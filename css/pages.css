@@ -60,3 +60,10 @@
         background-color: navajowhite;
         font-size: x-large;
     }
+    
+    @media (max-width: 500px) {
+        div {
+            margin: 0 auto;
+            width: auto;
+        }
+    }
